@@ -6,19 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  <script>
-  for(var i=1;i<=10;i++){
-  
-  debugger;//console.log(i%2==0);
-  var j=i;
-  if(j%2==0){
-  
-  console.log(j)
-  }
-  }
-  </script>
+  <style>
+.button-10 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  color: #fff;
+  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-10:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}  
+  </style>
 </head>
 <body onload="bodyload()">
-  
+
+<input id='input'>
+<button onclick='table()' class='button-10'>Next</button>
+
+  <script>
+
+  console.log(i)
+  function table(){
+  //console.log(i);
+    var i=document.getElementById('input').value;
+  for(var j=1;j<=10;j++){
+  console.log(i+" X "+j+" = "+ +i*j);
+  }
+  }
+
+  </script>
 </body>
 </html>
+<!-- HTML !-->
+<!--<button class="button-10" role="button">Button 10</button>--!>
+
+/* CSS */

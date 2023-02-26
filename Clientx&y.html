@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #s2{
+            background:red;height:100px;width:100px;position:relative;
+margin-top:-93px;
+display: none;
+        }
+    </style>
+<body  style="border:1px solid black;">
+
+<h1>Mouse Events</h1>
+<h2>The clientX and clientY Properties</h2>
+
+<div>
+<p>Click anywhere in this document to get the x and y coordinates of the mouse pointer, relative to the window.</p>
+<p id="demo">Coordinates:</p>
+<button id="s1" style="margin-left:50px" onclick="showCoords(event)">Hello</button>
+<button id="s1" style="margin-left:50px" onclick="showCoords(event)">Hello</button>
+<div id="s2"><p ></p></div>
+</div>
+
+<script>
+function showCoords(event) {
+  let x = event.clientX;
+  let y = event.clientY;
+  let text = "X coords: " + x + ", Y coords: " + y;
+  document.getElementById("demo").innerHTML = text;
+  document.getElementById('s2').style.left=x+40+"px";
+  document.getElementById('s2').style.display="block";
+}
+</script>
+
+</body>
+</html>
